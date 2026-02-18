@@ -1,0 +1,170 @@
+/* Animaciones para Centro de Monitoreo */
+
+/* Pulso suave para indicador LIVE */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 16px rgba(255, 77, 77, 0.8);
+  }
+}
+
+/* Parpadeo del indicador de cámara */
+@keyframes cameraBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Scan horizontal para simulación de escaneo */
+@keyframes horizontalScan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Ondas de alerta */
+@keyframes alertPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 77, 77, 0);
+  }
+}
+
+/* Deslizamiento suave de alerta */
+@keyframes slideInAlert {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brillos para elementos interactivos */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(45, 140, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(45, 140, 255, 0.6);
+  }
+}
+
+/* Rotación para indicadores cargando */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Aplicar animaciones a clases */
+.animate-pulse {
+  animation: softPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-camera-blink {
+  animation: cameraBlink 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-scan {
+  animation: horizontalScan 3s ease-in-out infinite;
+}
+
+.animate-alert {
+  animation: alertPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-slide-alert {
+  animation: slideInAlert 0.3s ease-out;
+}
+
+.animate-glow {
+  animation: glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Efectos de hover mejorados */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .group-hover\:glow {
+  animation: glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Efecto de vidrio para overlays */
+.glass-effect {
+  background: rgba(11, 15, 20, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(36, 50, 69, 0.4);
+}
+
+/* Shadow mejorado para video */
+.video-shadow {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
+              0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Bordes animados para alertas */
+.border-animate {
+  animation: borderFlash 1s ease-in-out;
+}
+
+@keyframes borderFlash {
+  0%, 100% {
+    border-color: rgba(255, 77, 77, 0.2);
+  }
+  50% {
+    border-color: rgba(255, 77, 77, 0.8);
+  }
+}
+
+/* Efecto de zoom para botones activos */
+.button-active {
+  transform: scale(1.02);
+}
+
+/* Transiciones suaves para cambios de estado */
+.state-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll suave */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(169, 183, 204, 0.3);
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(169, 183, 204, 0.6);
+}
