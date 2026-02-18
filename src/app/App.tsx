@@ -176,7 +176,7 @@ const App: React.FC = () => {
             <iframe 
               width="100%" 
               height="100%" 
-              src="https://www.youtube.com/embed/CJ3dAAna7jQ?autoplay=1&mute=1&loop=1&playlist=CJ3dAAna7jQ" 
+              src="https://www.youtube.com/embed/6eUtb9ycmno?autoplay=1&mute=1&loop=1&playlist=6eUtb9ycmno" 
               frameBorder="0" 
               allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
